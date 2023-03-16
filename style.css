@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*  Colors */
+  /*  Primary */
+  --LightCran: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  --NeonGreenHover: hsla(150, 100%, 66%, 0.597);
+
+  /*  Neutral */
+  --GrayishBlue: hsl(217, 19%, 28%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--DarkBlue);
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card {
+  background-color: var(--DarkGrayishBlue);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  text-align: center;
+  max-width: 600px;
+}
+.card--title {
+  color: var(--NeonGreen);
+  font-size: 0.5rem;
+  margin-top: calc(2rem + 5px);
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+.card--content {
+  color: var(--LightCran);
+  font-size: 1.75rem;
+}
+.card--divider {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.card--divider-desktop {
+  display: none;
+}
+.card--button {
+  background-color: var(--NeonGreen);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2rem;
+  left: calc(50% - 2rem);
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.card--button:hover {
+  background-color: var(--NeonGreenHover);
+}
+@media (min-width: 800px) {
+  .card--divider-desktop {
+    display: unset;
+  }
+  .card--divider-mobile {
+    display: none;
+  }
+}

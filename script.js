@@ -5,7 +5,11 @@ const cardContent = document.querySelector(".card--content");
 button.addEventListener("click", getNewAdvice);
 
 // Empty is bad so...
-window.addEventListener("load", getNewAdvice);
+window.addEventListener("load", () => {
+  adviceId.innerText = 0;
+  cardContent.innerText = `“Loading...”`;
+  getNewAdvice();
+});
 
 async function getNewAdvice() {
   const response = await fetch("https://api.adviceslip.com/advice");
